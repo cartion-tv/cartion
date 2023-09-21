@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'BobbyJones';
+  src: local('BobbyJones'),
+    url(../../assets/fonts/BobbyJones/BobbyJonesSoft.otf) format('truetype');
+}
+
+h1 {
+  font-family: BobbyJones, Arial, Helvetica, sans-serif;
+}
+
+.main-body {
+  width: 100%;
+  height: 100vh;
+}

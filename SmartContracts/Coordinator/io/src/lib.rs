@@ -5,25 +5,25 @@ use gmeta::{InOut,Metadata};
 
 
 #[derive(Encode, Decode, TypeInfo, Hash, PartialEq, PartialOrd, Eq, Ord, Clone, Copy, Debug)]
-pub enum CustomStruct {
-
-    Example
-
-    // Add States
+pub enum State {
+  Activo,
+  Inactivo
 }
 
 #[derive(Encode, Decode, TypeInfo, Hash, PartialEq, PartialOrd, Eq, Ord, Clone, Copy, Debug)]
 pub enum Action {
-    
-    // Add Actions
-    ExampleAction
+    Comprar,
+    Vender,
+    Renovar
 }
 
 #[derive(Encode, Decode, TypeInfo, Hash, PartialEq, PartialOrd, Eq, Ord, Clone, Copy, Debug)]
 pub enum  Event {
     
     // Add Events
-    ExampleEvent
+    Burn,
+    Mint,
+    Transfer
 }
 
 
@@ -36,6 +36,6 @@ impl Metadata for ContractMetadata{
      type Others = ();
      type Reply=();
      type Signal = ();
-     type State = Vec<(ActorId, u128)>;
+     type State = Vec<(ActorId, String)>;
 
 }

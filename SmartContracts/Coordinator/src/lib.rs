@@ -10,11 +10,11 @@ include!(concat!(env!("OUT_DIR"), "/wasm_binary.rs"));
 
 
 
-static mut STATE:Option<HashMap<ActorId, u128>> = None;
+static mut STATE:Option<HashMap<ActorId, String>> = None;
 
 
 
-fn state_mut() -> &'static mut HashMap<ActorId,u128> {
+fn state_mut() -> &'static mut HashMap<ActorId,String> {
 
     let state = unsafe { STATE.as_mut()};
 
@@ -51,18 +51,19 @@ fn handle_state() -> Result<()> {
 
         
         // We receive an action from the user and update the state. Example:
-        if let Action::ExampleAction = payload {
+        if let Action::Comprar = payload {
 
             let currentstate = state_mut();
 
 
 
             // Update your state Example: (ActorId,u128)
-            currentstate.insert(msg::source(), 10);
+            currentstate.insert(msg::source(), 'Activo');
             
 
             // Generate response message
-            msg::reply(Event::ExampleEvent,0)?;
+            msg::reply(Event::Transfer,0)?;
+            //Se hace la transferia el estado cambia a activo
 
         }
 

@@ -30,7 +30,7 @@ function MyNFT() {
 
   // Add your programID
   const programIDNFT =
-    '0x4f990568db52c0fa29f5ad772d46d271c63f01dc03c8ed10d7f2f2ec29993530';
+    '0x33740300dbab28372301c7630af0044465029d7ccbc3b4a4f05e5842a6f1b78c';
 
   // Add your metadata.txt
   const meta =

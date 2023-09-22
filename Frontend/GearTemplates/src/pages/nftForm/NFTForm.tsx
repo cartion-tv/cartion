@@ -1,5 +1,3 @@
-import { MyNFT } from 'components/NFTComponents/MyNFT';
-import './home.css';
 import {
   Card,
   Heading,
@@ -15,25 +13,14 @@ import {
   Box,
 } from '@chakra-ui/react';
 
-function Home() {
+function NFTForm() {
   return (
     <div className='main-body'>
       <section>
         <Box bg='#055251' w='100%' p={4} color='white'>
-          <MyNFT />
           <Card align='center'>
             <CardHeader>
               <Heading size='md'>Únete a un proyecto cinematográfico</Heading>
-            </CardHeader>
-            <CardFooter>
-              <Button variant='solid' backgroundColor='#055251' color='white'>
-                Ver más
-              </Button>
-            </CardFooter>
-          </Card>
-          <Card align='center'>
-            <CardHeader>
-              <Heading size='md'>Comparte tu proyecto cinematográfico</Heading>
             </CardHeader>
             <CardFooter>
               <Button variant='solid' backgroundColor='#055251' color='white'>
@@ -47,4 +34,4 @@ function Home() {
   );
 }
 
-export { Home };
+export { NFTForm };

@@ -1,6 +1,7 @@
-
 import { Account } from './account';
 import styles from './Header.module.scss';
+
+import logo from '../../../assets/images/CARTION_LOGO_COLO01.png';
 
 type Props = {
   isAccountVisible: boolean;
@@ -9,7 +10,7 @@ type Props = {
 function Header({ isAccountVisible }: Props) {
   return (
     <header className={styles.header}>
-      <h1>Logo</h1>
+      <img src={logo} />
       {isAccountVisible && <Account />}
     </header>
   );

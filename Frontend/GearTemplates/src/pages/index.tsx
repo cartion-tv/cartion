@@ -5,6 +5,7 @@ import { NFTForm } from './nftForm';
 import { NFTCollection } from './nftCollection';
 import { Comparte } from './comparte';
 import { CompraNFTs } from './compraNFTs';
+import { TuNFT } from './tuNFT';
 
 const routes = [
   { path: '/', Page: Home },
@@ -13,6 +14,7 @@ const routes = [
   { path: '/nftCollection', Page: NFTCollection },
   { path: '/comparte', Page: Comparte },
   { path: '/compraNFTs', Page: CompraNFTs },
+  { path: '/tuNFT', Page: TuNFT },
 ];
 
 function Routing() {

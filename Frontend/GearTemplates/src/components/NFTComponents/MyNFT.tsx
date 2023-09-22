@@ -1,15 +1,17 @@
 import { encodeAddress, ProgramMetadata } from '@gear-js/api';
 import { useEffect, useState } from 'react';
 import { useApi, useAlert, useAccount } from '@gear-js/react-hooks';
-import { Image, Heading, Card } from '@chakra-ui/react';
+import { Image, Heading, Card, Text, Center } from '@chakra-ui/react';
 
-function InfoNFT({ name, description, media, reference }: any) {
+function InfoNFT({ name, description, media }: any) {
   return (
     <Card w='350px' h='500px'>
-      <Heading>{name}</Heading>
-      <Heading>{description}</Heading>
       <Image src={media} />
-      <Heading>{reference}</Heading>
+      <Center>
+        <Heading>{name}</Heading>
+      </Center>
+      <Text>Descripción: </Text>
+      <Text>{description}</Text>
     </Card>
   );
 }
@@ -73,12 +75,7 @@ function MyNFT() {
     <>
       {/* <Heading>My NFTs</Heading> */}
       {existNFT ? (
-        <InfoNFT
-          name={NFTName}
-          description={Description}
-          media={Media}
-          reference={Reference}
-        />
+        <InfoNFT media={Media} name={NFTName} description={Description} />
       ) : (
         <Heading size='lg'>NO NFTs</Heading>
       )}

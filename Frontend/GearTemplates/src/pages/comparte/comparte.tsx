@@ -7,6 +7,10 @@ import {
   CardFooter,
   Button,
   Box,
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  Center,
 } from '@chakra-ui/react';
 
 import { Link } from 'react-router-dom';
@@ -14,6 +18,23 @@ import { Link } from 'react-router-dom';
 function Comparte() {
   return (
     <div className='main-body'>
+      <section>
+        <Breadcrumb>
+          <BreadcrumbItem>
+            <BreadcrumbLink href='/'>Home</BreadcrumbLink>
+          </BreadcrumbItem>
+
+          <BreadcrumbItem>
+            <BreadcrumbLink href='/comparte'>Comparte</BreadcrumbLink>
+          </BreadcrumbItem>
+        </Breadcrumb>
+      </section>
+      <section>
+        <Center>
+          <Heading color='#b8860b'>Comparte</Heading>
+        </Center>
+      </section>
+
       <section>
         <Box border='2px' borderColor='#055251' w='100%' p={4} color='white'>
           <Card align='center'>
@@ -31,7 +52,7 @@ function Comparte() {
                 as={Link}
                 to='/nftForm'
               >
-                Paso 1
+                Empezar
               </Button>
             </CardFooter>
           </Card>

@@ -14,6 +14,8 @@ import {
   Box,
 } from '@chakra-ui/react';
 
+import { Link } from 'react-router-dom';
+
 import uneteLogo from '../../assets/images/manos_cuadrito.jpg';
 import comparteLogo from '../../assets/images/subir_cuadrito.jpg';
 
@@ -46,6 +48,8 @@ function Home() {
                     variant='solid'
                     backgroundColor='#055251'
                     color='white'
+                    as={Link}
+                    to='/compraNFTs'
                   >
                     Ver más
                   </Button>
@@ -77,6 +81,8 @@ function Home() {
                     variant='solid'
                     backgroundColor='#055251'
                     color='white'
+                    as={Link}
+                    to='/comparte'
                   >
                     Ver más
                   </Button>

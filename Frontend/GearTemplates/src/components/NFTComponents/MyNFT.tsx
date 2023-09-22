@@ -30,7 +30,7 @@ function MyNFT() {
 
   // Add your programID
   const programIDNFT =
-    '0x33740300dbab28372301c7630af0044465029d7ccbc3b4a4f05e5842a6f1b78c';
+    '0x567162a71d0343e7ddc98bdbb0c9575f12e946588914cc8d7e4d13116ede1785';
 
   // Add your metadata.txt
   const meta =
@@ -71,7 +71,7 @@ function MyNFT() {
 
   return (
     <>
-      <Heading>My NFTs</Heading>
+      {/* <Heading>My NFTs</Heading> */}
       {existNFT ? (
         <InfoNFT
           name={NFTName}

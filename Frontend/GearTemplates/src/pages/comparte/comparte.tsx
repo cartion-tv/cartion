@@ -9,6 +9,8 @@ import {
   Box,
 } from '@chakra-ui/react';
 
+import { Link } from 'react-router-dom';
+
 function Comparte() {
   return (
     <div className='main-body'>
@@ -22,7 +24,13 @@ function Comparte() {
               <Text>Tu vida de película.</Text>
             </CardBody>
             <CardFooter>
-              <Button variant='solid' backgroundColor='#055251' color='white'>
+              <Button
+                variant='solid'
+                backgroundColor='#055251'
+                color='white'
+                as={Link}
+                to='/nftForm'
+              >
                 Paso 1
               </Button>
             </CardFooter>
@@ -32,7 +40,13 @@ function Comparte() {
               <Heading size='md'>Revisa tus NFTs</Heading>
             </CardHeader>
             <CardFooter>
-              <Button variant='solid' backgroundColor='#055251' color='white'>
+              <Button
+                variant='solid'
+                backgroundColor='#055251'
+                color='white'
+                as={Link}
+                to='/nftCollection'
+              >
                 Ver más
               </Button>
             </CardFooter>

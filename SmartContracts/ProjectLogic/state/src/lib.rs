@@ -14,9 +14,7 @@ pub mod metafns {
     pub type State = <ContractMetadata as Metadata>::State;
 
 
-    // Add your State functions
-
-    pub fn get_state(state: State) -> Vec<(ActorId, u128)> {
+    pub fn get_state(state: State) -> Vec<(ActorId, String),u128> {
         state
     }
 

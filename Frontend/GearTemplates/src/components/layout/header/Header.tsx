@@ -10,7 +10,7 @@ type Props = {
 function Header({ isAccountVisible }: Props) {
   return (
     <header className={styles.header}>
-      <img src={logo} />
+      <img src={logo} alt='logo' />
       {isAccountVisible && <Account />}
     </header>
   );

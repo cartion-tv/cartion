@@ -9,8 +9,9 @@ import {
   Divider,
 } from '@chakra-ui/react';
 import { MyNFT } from 'components/NFTComponents/MyNFT';
+import { TransferNFT } from 'components/NFTComponents/TransferNFT';
 
-function NFTCollection() {
+function CompraNFTs() {
   return (
     <SimpleGrid
       spacing={4}
@@ -27,10 +28,11 @@ function NFTCollection() {
           <Text color='blue.600' fontSize='2xl'>
             10 Disponibles
           </Text>
+          <TransferNFT />
         </CardFooter>
       </Card>
     </SimpleGrid>
   );
 }
 
-export { NFTCollection };
+export { CompraNFTs };

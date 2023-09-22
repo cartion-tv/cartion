@@ -10,11 +10,11 @@ include!(concat!(env!("OUT_DIR"), "/wasm_binary.rs"));
 
 
 
-static mut STATE:Option<HashMap<ActorId, String>> = None;
+static mut STATE:Option<HashMap<(ActorId, String),u128>> = None;
 
 
 
-fn state_mut() -> &'static mut HashMap<ActorId,String> {
+fn state_mut() -> &'static mut HashMap<(ActorId, String),u128> {
 
     let state = unsafe { STATE.as_mut()};
 
@@ -45,29 +45,30 @@ extern "C" fn handle(){
 
 fn handle_state() -> Result<()> {
 
-
-        // We load the input message
         let payload = msg::load()?;
 
-        
-        // We receive an action from the user and update the state. Example:
-        if let Action::Comprar = payload {
+        if let Action::ValidateProject = payload {
 
             let currentstate = state_mut();
 
+            currentstate.insert((msg::source(), 'Completed'),0);
 
-
-            // Update your state Example: (ActorId,u128)
-            currentstate.insert(msg::source(), 'Activo');
-            
-
-            // Generate response message
             msg::reply(Event::Transfer,0)?;
-            //Se hace la transferia el estado cambia a activo
 
         }
+/* InProcess,
+  InValidation,
+  Completed
+   */
+        if let Action::RateProject = payload {
 
-       
+            let currentstate = state_mut();
+
+            currentstate.insert((msg::source(), 'Completed'), 2);
+
+            msg::reply(Event::Transfer,0)?;
+
+        }
 
     Ok(())
     }

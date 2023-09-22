@@ -6,24 +6,22 @@ use gmeta::{InOut,Metadata};
 
 #[derive(Encode, Decode, TypeInfo, Hash, PartialEq, PartialOrd, Eq, Ord, Clone, Copy, Debug)]
 pub enum State {
-  Activo,
-  Inactivo
+  InProcess,
+  InValidation,
+  Completed
 }
 
 #[derive(Encode, Decode, TypeInfo, Hash, PartialEq, PartialOrd, Eq, Ord, Clone, Copy, Debug)]
 pub enum Action {
-    Comprar,
-    Vender,
-    Renovar
+    ValidateProject,
+    RateProject
 }
 
 #[derive(Encode, Decode, TypeInfo, Hash, PartialEq, PartialOrd, Eq, Ord, Clone, Copy, Debug)]
 pub enum  Event {
     
     // Add Events
-    Burn,
-    Mint,
-    Transfer
+    ChangeState,
 }
 
 
@@ -36,6 +34,6 @@ impl Metadata for ContractMetadata{
      type Others = ();
      type Reply=();
      type Signal = ();
-     type State = Vec<(ActorId, String)>;
+     type State = Vec<(ActorId, String),u128>;
 
 }

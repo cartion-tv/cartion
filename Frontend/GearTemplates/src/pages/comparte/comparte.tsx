@@ -6,34 +6,40 @@ import {
   Text,
   CardFooter,
   Button,
+  Box,
 } from '@chakra-ui/react';
-const Comparte = () => {
+
+function Comparte() {
   return (
     <div className='main-body'>
       <section>
-        <Card align='center'>
-          <CardHeader>
-            <Heading size='md'>Comparte tu proyecto cinematográfico</Heading>
-          </CardHeader>
-          <CardBody>
-            <Text>Tu vida de película.</Text>
-          </CardBody>
-          <CardFooter>
-            <Button backgroundColor='#055251'>Paso 1</Button>
-          </CardFooter>
-        </Card>
-      </section>
-      <section>
-        <Card align='center'>
-          <CardHeader>
-            <Heading size='md'>Revisa tus NFTs</Heading>
-          </CardHeader>
-          <CardFooter>
-            <Button backgroundColor='#055251'>Ir</Button>
-          </CardFooter>
-        </Card>
+        <Box border='2px' borderColor='#055251' w='100%' p={4} color='white'>
+          <Card align='center'>
+            <CardHeader>
+              <Heading size='md'>Comparte tu proyecto cinematográfico</Heading>
+            </CardHeader>
+            <CardBody>
+              <Text>Tu vida de película.</Text>
+            </CardBody>
+            <CardFooter>
+              <Button variant='solid' backgroundColor='#055251' color='white'>
+                Paso 1
+              </Button>
+            </CardFooter>
+          </Card>
+          <Card align='center' border='2px' borderColor='#055251'>
+            <CardHeader>
+              <Heading size='md'>Revisa tus NFTs</Heading>
+            </CardHeader>
+            <CardFooter>
+              <Button variant='solid' backgroundColor='#055251' color='white'>
+                Ver más
+              </Button>
+            </CardFooter>
+          </Card>
+        </Box>
       </section>
     </div>
   );
-};
-export default Comparte;
+}
+export { Comparte };

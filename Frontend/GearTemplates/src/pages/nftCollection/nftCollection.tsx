@@ -5,13 +5,12 @@ import {
   CardBody,
   Text,
   CardFooter,
-  Image,
   Stack,
   Divider,
 } from '@chakra-ui/react';
 import { MyNFT } from 'components/NFTComponents/MyNFT';
 
-const nftCollection = () => {
+function NFTCollection() {
   return (
     <SimpleGrid
       spacing={4}
@@ -33,5 +32,6 @@ const nftCollection = () => {
       </Card>
     </SimpleGrid>
   );
-};
-export default nftCollection;
+}
+
+export { NFTCollection };

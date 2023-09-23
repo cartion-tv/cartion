@@ -41,7 +41,9 @@ function TuNFT() {
       </section>
       <section>
         <Center>
-          <Heading color='#b8860b'>Tu NFT</Heading>
+          <Heading color='#b8860b' marginBottom='20px'>
+            Tu NFT
+          </Heading>
         </Center>
       </section>
       <Grid
@@ -50,14 +52,22 @@ function TuNFT() {
         border='1px'
         borderColor='#055251'
       >
-        <GridItem colStart={2} colEnd={3} w='100%' h='100%'>
+        <GridItem
+          colStart={2}
+          colEnd={3}
+          w='100%'
+          h='100%'
+          marginTop='20px'
+          marginBottom='20px'
+          marginLeft='40px'
+        >
           <Card w='sm' border='1px' borderColor='#055251'>
             <CardBody>
               <MyNFT />
             </CardBody>
             <Divider />
             <CardFooter>
-              <Text color='blue.600' fontSize='2xl'>
+              <Text color='blue.600' fontSize='2xl' marginLeft='90px'>
                 10 Disponibles
               </Text>
             </CardFooter>

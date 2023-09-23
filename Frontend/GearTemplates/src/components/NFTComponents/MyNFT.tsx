@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { useApi, useAlert, useAccount } from '@gear-js/react-hooks';
 import { Image, Heading, Card, Text, Center } from '@chakra-ui/react';
 
-function InfoNFT({ name, description, media }: any) {
+function InfoNFT({ name, description, media, reference }: any) {
   return (
     <Card w='350px' h='500px'>
       <Image src={media} />
@@ -75,7 +75,12 @@ function MyNFT() {
     <>
       {/* <Heading>My NFTs</Heading> */}
       {existNFT ? (
-        <InfoNFT media={Media} name={NFTName} description={Description} />
+        <InfoNFT
+          media={Media}
+          name={NFTName}
+          description={Description}
+          reference={Reference}
+        />
       ) : (
         <Heading size='lg'>NO NFTs</Heading>
       )}

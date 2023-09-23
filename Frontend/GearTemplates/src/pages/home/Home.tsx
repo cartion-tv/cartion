@@ -23,6 +23,13 @@ function Home() {
   return (
     <div className='main-body'>
       <section>
+        <Center>
+          <Heading color='#b8860b' marginBottom='20px'>
+            Cartelera en Producción
+          </Heading>
+        </Center>
+      </section>
+      <section>
         <Box border='2px' borderColor='#055251' w='100%' p={4} color='white'>
           <Card align='center'>
             <Card

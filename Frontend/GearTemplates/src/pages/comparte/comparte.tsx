@@ -31,7 +31,9 @@ function Comparte() {
       </section>
       <section>
         <Center>
-          <Heading color='#b8860b'>Comparte</Heading>
+          <Heading color='#b8860b' marginBottom='20px'>
+            Comparte
+          </Heading>
         </Center>
       </section>
 

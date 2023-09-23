@@ -10,7 +10,7 @@ function MintNFT() {
 
   // Add your programID
   const programIDNFT =
-    '0xdd191e0c5fedea0052626d2fa42e24f2ee1b1f166148b7f0419d020cb1bc3da5';
+    '0x567162a71d0343e7ddc98bdbb0c9575f12e946588914cc8d7e4d13116ede1785';
 
   // Add your metadata.txt
   const meta =
@@ -22,13 +22,12 @@ function MintNFT() {
     destination: programIDNFT, // programId
     payload: {
       mint: [
-        2,
+        10,
         {
-          name: 'VARA',
-          description: 'VARA NFT',
-          media:
-            'https://strapi.mewapi.io/uploads/logo_vara_black_1_85279a4c70.png',
-          reference: 'Vara Example',
+          name: 'Tare NFT Cartion',
+          description: 'Tare',
+          media: 'https://luconcha.github.io/images/TARE_NFT002.jpg',
+          reference: 'Tare NFT Cartion',
         },
       ],
     }, // Add your data

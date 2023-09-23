@@ -42,13 +42,15 @@ function NFTForm() {
       </section>
       <section>
         <Center>
-          <Heading color='#b8860b'>Ingresa tus datos</Heading>
+          <Heading color='#b8860b' marginBottom='20px'>
+            Ingresa tus datos
+          </Heading>
         </Center>
       </section>
       <section>
         <Box border='2px' borderColor='#055251' w='100%' p={4} color='white'>
           <Center>
-            <Card align='center' w='700px'>
+            <Card align='center' w='700px' marginTop='20px'>
               {/* <label>
                 Nombre del Proyecto
                 <Input type='text' value={value} />
@@ -86,6 +88,8 @@ function NFTForm() {
                 color='white'
                 as={Link}
                 to='/tuNFT'
+                marginTop='20px'
+                marginBottom='20px'
               >
                 Enviar
               </Button>

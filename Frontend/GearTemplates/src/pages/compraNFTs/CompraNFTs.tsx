@@ -35,7 +35,9 @@ function CompraNFTs() {
       </section>
       <section>
         <Center>
-          <Heading color='#b8860b'>Únete a un proyecto cinematográfico</Heading>
+          <Heading color='#b8860b' marginBottom='20px'>
+            Únete a un proyecto cinematográfico
+          </Heading>
         </Center>
       </section>
       <Grid
@@ -43,85 +45,134 @@ function CompraNFTs() {
         gap={6}
         border='1px'
         borderColor='#055251'
+        alignContent='center'
       >
-        <GridItem w='100%' h='100%'>
+        <GridItem w='100%' h='100%' marginLeft='30px' marginTop='20px'>
           <Card w='sm' border='1px' borderColor='#055251'>
             <CardBody>
               <MyNFT />
             </CardBody>
             <Divider />
             <CardFooter>
-              <Text color='blue.600' fontSize='2xl'>
+              <Text
+                color='blue.600'
+                fontSize='2xl'
+                marginLeft='30px'
+                marginRight='30px'
+              >
                 10 Disponibles
               </Text>
               <MintNFT />
             </CardFooter>
           </Card>
         </GridItem>
-        <GridItem w='100%' h='100%'>
+        <GridItem w='100%' h='100%' marginLeft='30px' marginTop='20px'>
           <Card w='sm' border='1px' borderColor='#055251'>
             <CardBody>
               <MyNFT />
             </CardBody>
             <Divider />
             <CardFooter>
-              <Text color='blue.600' fontSize='2xl'>
+              <Text
+                color='blue.600'
+                fontSize='2xl'
+                marginLeft='30px'
+                marginRight='30px'
+              >
                 10 Disponibles
               </Text>
               <MintNFT />
             </CardFooter>
           </Card>
         </GridItem>
-        <GridItem w='100%' h='100%'>
+        <GridItem w='100%' h='100%' marginLeft='30px' marginTop='20px'>
           <Card w='sm' border='1px' borderColor='#055251'>
             <CardBody>
               <MyNFT />
             </CardBody>
             <Divider />
             <CardFooter>
-              <Text color='blue.600' fontSize='2xl'>
+              <Text
+                color='blue.600'
+                fontSize='2xl'
+                marginLeft='30px'
+                marginRight='30px'
+              >
                 10 Disponibles
               </Text>
               <MintNFT />
             </CardFooter>
           </Card>
         </GridItem>
-        <GridItem w='100%' h='100%'>
+        <GridItem
+          w='100%'
+          h='100%'
+          marginLeft='30px'
+          marginTop='20px'
+          marginBottom='20px'
+        >
           <Card w='sm' border='1px' borderColor='#055251'>
             <CardBody>
               <MyNFT />
             </CardBody>
             <Divider />
             <CardFooter>
-              <Text color='blue.600' fontSize='2xl'>
+              <Text
+                color='blue.600'
+                fontSize='2xl'
+                marginLeft='30px'
+                marginRight='30px'
+              >
                 10 Disponibles
               </Text>
               <MintNFT />
             </CardFooter>
           </Card>
         </GridItem>
-        <GridItem w='100%' h='100%'>
+        <GridItem
+          w='100%'
+          h='100%'
+          marginLeft='30px'
+          marginTop='20px'
+          marginBottom='20px'
+        >
           <Card w='sm' border='1px' borderColor='#055251'>
             <CardBody>
               <MyNFT />
             </CardBody>
             <Divider />
             <CardFooter>
-              <Text color='blue.600' fontSize='2xl'>
+              <Text
+                color='blue.600'
+                fontSize='2xl'
+                marginLeft='30px'
+                marginRight='30px'
+              >
                 10 Disponibles
               </Text>
               <MintNFT />
             </CardFooter>
           </Card>
         </GridItem>
-        <GridItem w='100%' h='100%'>
+        <GridItem
+          w='100%'
+          h='100%'
+          marginLeft='30px'
+          marginTop='20px'
+          marginBottom='20px'
+        >
           <Card w='sm' border='1px' borderColor='#055251'>
             <CardBody>
               <MyNFT />
             </CardBody>
             <Divider />
             <CardFooter>
-              <Text color='blue.600' fontSize='2xl'>
+              <Text
+                color='blue.600'
+                fontSize='2xl'
+                marginLeft='30px'
+                marginRight='30px'
+              >
                 10 Disponibles
               </Text>
               <MintNFT />

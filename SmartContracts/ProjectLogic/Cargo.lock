@@ -493,21 +493,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6245d59a3e82a7fc217c5828a6692dbc6dfb63a0c8c90495621f7b9d79704a0e"
 
 [[package]]
-name = "coodinator"
-version = "0.1.0"
-dependencies = [
- "gclient",
- "gear-wasm-builder",
- "gmeta",
- "gstd",
- "gtest",
- "hashbrown 0.14.0",
- "io",
- "state",
- "tokio",
-]
-
-[[package]]
 name = "core-foundation"
 version = "0.9.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2746,6 +2731,21 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3d433d9f1a3e8c1263d9456598b16fec66f4acc9a74dacffd35c7bb09b3a1328"
 dependencies = [
  "unicode-ident",
+]
+
+[[package]]
+name = "projectlogic"
+version = "0.1.0"
+dependencies = [
+ "gclient",
+ "gear-wasm-builder",
+ "gmeta",
+ "gstd",
+ "gtest",
+ "hashbrown 0.14.0",
+ "io",
+ "state",
+ "tokio",
 ]
 
 [[package]]

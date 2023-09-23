@@ -10,6 +10,15 @@ import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
+  Text,
+  Textarea,
+  NumberInput,
+  NumberInputField,
+  NumberInputStepper,
+  NumberIncrementStepper,
+  NumberDecrementStepper,
+  InputGroup,
+  InputLeftElement,
 } from '@chakra-ui/react';
 
 import { useState } from 'react';
@@ -51,31 +60,43 @@ function NFTForm() {
         <Box border='2px' borderColor='#055251' w='100%' p={4} color='white'>
           <Center>
             <Card align='center' w='700px' marginTop='20px'>
-              {/* <label>
-                Nombre del Proyecto
-                <Input type='text' value={value} />
-              </label> */}
+              <Text>Nombre del Proyecto:</Text>
               <Input placeholder='Nombre del Proyecto' />
-              <Input placeholder='Monto requerido para terminar el proyecto' />
-              <Input placeholder='Description del proyecto' />
+              <Text>Monto requerido para terminar el proyecto:</Text>
+              <NumberInput>
+                <NumberInputField />
+                <NumberInputStepper>
+                  <NumberIncrementStepper />
+                  <NumberDecrementStepper />
+                </NumberInputStepper>
+              </NumberInput>
+              <Text>Descripción del proyecto:</Text>
+              <Textarea placeholder='Descripción del proyecto' />
+              <Text>Fecha de terminara de la produccion de proyecto:</Text>
+
               <Input
                 placeholder='Fecha de terminara de la produccion de proyecto'
                 type='datetime-local'
               />
-              <Input placeholder='Cuentanos mas de Ustedes' />
-              <Input placeholder='Cuentanos mas de anteriores proyectos' />
+              <Text>Cuentános más de Ustedes:</Text>
+              <Textarea placeholder='Cuentános más de Ustedes' />
+              <Text>Cuentános más de anteriores proyectos:</Text>
+              <Textarea placeholder='Cuentános más de anteriores proyectos' />
+              <Text>Sube tus videos:</Text>
               <Input
                 type='file'
                 // onChange={handleFileUpload}
                 accept='.jpg, .jpeg, .png, .gif'
                 placeholder='Imagenes del proyecto'
               />
+              <Text>Sube tus imágenes:</Text>
               <Input
                 type='file'
                 // onChange={handleFileUpload}
                 accept='.jpg, .jpeg, .png, .gif'
                 placeholder='Videos del proyecto'
               />
+              <Text>Sube tu imagen para NFT:</Text>
               <Input
                 type='file'
                 // onChange={handleFileUpload}

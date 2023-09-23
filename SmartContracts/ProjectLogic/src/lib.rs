@@ -1,4 +1,3 @@
-
 #![no_std]
 use gstd::{errors::Result, msg , prelude::*,ActorId};
 use gmeta::{Metadata};
@@ -51,9 +50,9 @@ fn handle_state() -> Result<()> {
 
             let currentstate = state_mut();
 
-            currentstate.insert((msg::source(), 'Completed'),0);
+            currentstate.insert((msg::source(), "Completed".to_string()),0);
 
-            msg::reply(Event::Transfer,0)?;
+            msg::reply(Event::ChangeState,0)?;
 
         }
 /* InProcess,
@@ -64,9 +63,9 @@ fn handle_state() -> Result<()> {
 
             let currentstate = state_mut();
 
-            currentstate.insert((msg::source(), 'Completed'), 2);
+            currentstate.insert((msg::source(), "Completed".to_string()), 2);
 
-            msg::reply(Event::Transfer,0)?;
+            msg::reply(Event::ChangeState,0)?;
 
         }
 
@@ -78,10 +77,8 @@ fn handle_state() -> Result<()> {
     #[no_mangle]
     extern "C" fn state() {
 
-        // We create a state variable.
         let state: <ContractMetadata as Metadata>::State =
-            state_mut().iter().map(|(k, v)| (*k, *v)).collect();
+            state_mut().iter().map(|(k, v)| (k.clone(), v.clone())).collect();
          
-        // Generate response message
         msg::reply(state, 0).expect("failed to encode or reply from `state()`");
     }
